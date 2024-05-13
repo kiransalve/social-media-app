@@ -1,5 +1,6 @@
-import { FaTwitter } from "react-icons/fa";
+import { FaGoogle, FaTwitter } from "react-icons/fa";
 import Button from "./components/Button/Button";
+import { MdEmail } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -12,15 +13,26 @@ export default function Home() {
           Happening Now
         </div>
         <div className="text-[2rem]">Join Today</div>
-        <Button>Sign up with Google</Button>
-        <Button>Sign up with Email ID</Button>
+
+        <Button>
+          <div className="flex items-center justify-center gap-2">
+            <FaGoogle color="blue" />
+            Sign up with Google
+          </div>
+        </Button>
+        <Button>
+          <div className="flex items-center justify-center gap-2">
+            <MdEmail color="blue" />
+            Sign up with Email ID
+          </div>
+        </Button>
 
         <div className="relative lg:w-80 w-60 flex items-center justify-center">
           <div className="left-0 absolute border-[.9px] border-[whitesmoke] w-[45%]"></div>
           <span className="">or</span>
           <div className="right-0 absolute border-[.9px] border-[whitesmoke] w-[45%]"></div>
         </div>
-        <Button bgcolor="blue-600" textcolor="text-[#fff]">
+        <Button bgcolor="bg-blue-600" textcolor="text-[#fff]">
           Create Account
         </Button>
         <div className="text-[12px] w-80 ">

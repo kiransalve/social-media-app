@@ -8,9 +8,9 @@ interface ChildrenProps {
 const Button: React.FC<ChildrenProps> = ({ children, bgcolor, textcolor }) => {
   return (
     <div
-      className={`${bgcolor ? `bg-${bgcolor}` : ""} ${
+      className={`${bgcolor ? `${bgcolor}` : ""} ${
         textcolor ? `${textcolor}` : ""
-      } lg:w-80 w-60 h-10 rounded-2xl border flex items-center justify-center`}
+      } lg:w-80 w-60 h-10 rounded-2xl border flex items-center justify-center cursor-pointer`}
     >
       <button className="">{children}</button>
     </div>
