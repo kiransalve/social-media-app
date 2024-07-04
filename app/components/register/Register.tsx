@@ -13,7 +13,7 @@ const Register = () => {
   const [error, setError] = useState(false);
 
   const handleSignup = async () => {
-    const response = await fetch("api/user/signup", {
+    const response = await fetch("api/register", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
@@ -21,13 +21,13 @@ const Register = () => {
       },
     });
     const data = await response.json();
-
+    console.log("User created successfully", email);
     if (response.ok) {
       setUserCreated(true);
       setTimeout(() => {
         setUserCreated(false);
         router.push("/?signin=true");
-      }, 4000);
+      }, 3000);
     } else {
       setError(true);
       setTimeout(() => setError(false), 4000);

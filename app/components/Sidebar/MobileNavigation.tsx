@@ -7,6 +7,7 @@ import { FaUser } from "react-icons/fa";
 import { TbLetterK } from "react-icons/tb";
 import { RiFileListFill } from "react-icons/ri";
 import Link from "next/link";
+import Post from "../Post/Writepost";
 
 const sidebarText = [
   { path: "/homepage", title: "Home", icon: <IoMdHome /> },
