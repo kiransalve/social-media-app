@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import AppContext from "./AppContext";
+import { AuthProvider } from "@/context/AuthContext";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"] });
 
 export const metadata: Metadata = {
@@ -16,13 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <div className="flex container mx-auto px-6">
-          <AppContext>
+      <AuthProvider>
+        <body className={poppins.className}>
+          <div className="flex container mx-auto px-6">
             <div className="w-full">{children}</div>
-          </AppContext>
-        </div>
-      </body>
+          </div>
+        </body>
+      </AuthProvider>
     </html>
   );
 }

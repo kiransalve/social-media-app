@@ -1,6 +1,5 @@
 import React from "react";
 import { TbLetterK } from "react-icons/tb";
-import Button from "../Button/Button";
 
 const Accounts = () => {
   return (
@@ -13,15 +12,8 @@ const Accounts = () => {
             <div className="text-sm text-slate-500">@salvekiran</div>
           </div>
         </div>
-
-        <div className="">
-          <Button
-            width="w-[120px]"
-            textcolor="text-white"
-            bgcolor="bg-blue-400"
-          >
-            Follow
-          </Button>
+        <div className="px-2 py-1 font-bold border rounded-lg bg-blue-400 text-white">
+          <button className="">Follow</button>
         </div>
       </div>
     </div>

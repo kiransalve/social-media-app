@@ -1,6 +1,5 @@
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
-import Button from "../Button/Button";
 import { TbLetterK } from "react-icons/tb";
 import Accounts from "./Accounts";
 const News = () => {
@@ -23,26 +22,23 @@ const News = () => {
             Subscribe to unlock new features and if eligible, receive a share of
             ads revenue.
           </div>
-          <Button
-            width="w-[120px]"
-            textcolor="text-white"
-            bgcolor="bg-blue-400"
-          >
-            Subscribe
-          </Button>
+          <button>Subscribe</button>
         </div>
-        <div className="border p-3 mt-2 rounded-xl overflow-scroll h-[400px] scroll-none ">
+        <div className="border p-3 mt-2 rounded-xl ">
           <div className="text-[20px] font-bold">Who to Follow</div>
-          <Accounts />
-          <Accounts />
-          <Accounts />
-          <Accounts />
-          <Accounts />
-          <Accounts />
-          <Accounts />
-          <Accounts />
-          <Accounts />
-          <Accounts />
+          <hr className="mt-2" />
+          <div className="overflow-scroll h-[400px] scroll-none ">
+            <Accounts />
+            <Accounts />
+            <Accounts />
+            <Accounts />
+            <Accounts />
+            <Accounts />
+            <Accounts />
+            <Accounts />
+            <Accounts />
+            <Accounts />
+          </div>
         </div>
       </div>
     </div>

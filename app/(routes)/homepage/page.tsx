@@ -1,7 +1,6 @@
-import Writepost from "@/app/components/Post/Writepost";
-import Post from "@/app/components/Post/Post";
 import MobileNavigation from "@/app/components/Sidebar/MobileNavigation";
 import React from "react";
+import CreatePost from "@/app/components/Post/CreatePost";
 
 const Homepage = () => {
   return (
@@ -10,14 +9,7 @@ const Homepage = () => {
         <MobileNavigation />
       </div>
       <div className="lg:block hidden overflow-scroll h-screen scroll-none ">
-        <Writepost />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <CreatePost />
       </div>
     </div>
   );

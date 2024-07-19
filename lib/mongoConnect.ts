@@ -8,8 +8,12 @@ if (!process.env.MONGO_URL) {
 const uri = process.env.MONGO_URL;
 const options = {};
 
-let client;
-let clientPromise;
+let client: MongoClient;
+let clientPromise: Promise<MongoClient>;
+
+declare global {
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
+}
 
 if (process.env.NODE_ENV === "development") {
   // In development mode, use a global variable so that the value

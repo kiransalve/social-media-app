@@ -11,3 +11,6 @@
 .scroll-none {
   scrollbar-width: none;
 }
+.rounded-button {
+  @apply border py-3 px-5 rounded-2xl w-72 text-center;
+}
